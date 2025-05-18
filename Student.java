@@ -1,7 +1,11 @@
 /**
+ * Package containing student entity classes.
+ */
+package com.example.student;  // Add your actual package name here
+
+/**
  * Represents a student with name, age, and major.
  */
-// If this is in a package, add package-info.java to fix JavadocPackage error
 public final class Student {
     /** Student's full name. */
     private final String name;
@@ -12,12 +16,13 @@ public final class Student {
 
     /**
      * Constructs a new Student.
-     *
-     * @param nameParam  the student's name
-     * @param ageParam   the student's age
+     * @param nameParam the student's name
+     * @param ageParam the student's age
      * @param majorParam the student's major
      */
-    public Student(final String nameParam, final int ageParam, final String majorParam) {
+    public Student(final String nameParam, 
+                  final int ageParam, 
+                  final String majorParam) {
         this.name = nameParam;
         this.age = ageParam;
         this.major = majorParam;
@@ -46,16 +51,19 @@ public final class Student {
 
     @Override
     public String toString() {
-        return "Student{"
-            + "name=\"" + name + "\", "
-            + "age=" + age + ", "
-            + "major=\"" + major + "\""
-            + "}";
+        return new StringBuilder()
+            .append("Student{name=\"")
+            .append(name)
+            .append("\", age=")
+            .append(age)
+            .append(", major=\"")
+            .append(major)
+            .append("\"}")
+            .toString();
     }
 
     /**
      * Main method for demonstration.
-     *
      * @param args command-line arguments (unused)
      */
     public static void main(final String[] args) {
