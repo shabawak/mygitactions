@@ -1,30 +1,37 @@
-class Student{
-  private String name;
-  private int age;
-  private String major;
+/**
+ * Represents a student with name, age, and major.
+ */
+public class Student {
+    private final String name;
+    private final int age;
+    private final String major;
 
-  public Student(String name, String major, int age){
-    this.name = name;
-    this.major = major;
-    this.age = age;
-  }
+    public Student(String name, String major, int age) {
+        this.name = name;
+        this.age = age;
+        this.major = major;
+    }
 
-  public String getMajor(){
-    return major;
-  }
+    // Getters
+    public String getName() {
+        return name;
+    }
 
-  public int getAge(){
-    return age;
-  }
+    public int getAge() {
+        return age;
+    }
 
-  @Override
-  public String toString(){
-    return "Student{name:'" + name + "', age:'" + age + "', major:'" + major + "'}";
-  }
+    public String getMajor() {
+        return major;
+    }
 
-  public static void main(String[] args){
-    Student student = new Student("John Doe","Software Engineering", 23);
-    System.out.println(student);
-  }
-   
+    @Override
+    public String toString() {
+        return "Student{name=\"" + name + "\", age=" + age + ", major=\"" + major + "\"}";
+    }
+
+    public static void main(String[] args) {
+        Student student = new Student("John Doe", "Software Engineering", 23);
+        System.out.println(student);
+    }
 }
