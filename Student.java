@@ -1,6 +1,7 @@
 /**
  * Represents a student with name, age, and major.
  */
+// If this is in a package, add package-info.java to fix JavadocPackage error
 public final class Student {
     /** Student's full name. */
     private final String name;
@@ -12,14 +13,14 @@ public final class Student {
     /**
      * Constructs a new Student.
      *
-     * @param name  the student's name
-     * @param age   the student's age
-     * @param major the student's major
+     * @param nameParam  the student's name
+     * @param ageParam   the student's age
+     * @param majorParam the student's major
      */
-    public Student(final String name, final int age, final String major) {
-        this.name = name;
-        this.age = age;
-        this.major = major;
+    public Student(final String nameParam, final int ageParam, final String majorParam) {
+        this.name = nameParam;
+        this.age = ageParam;
+        this.major = majorParam;
     }
 
     /**
@@ -59,7 +60,11 @@ public final class Student {
      */
     public static void main(final String[] args) {
         final int studentAge = 23;
-        Student student = new Student("John Doe", studentAge, "Software Engineering");
+        Student student = new Student(
+            "John Doe", 
+            studentAge, 
+            "Software Engineering"
+        );
         System.out.println(student);
     }
 }
