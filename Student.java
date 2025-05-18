@@ -1,7 +1,7 @@
 class Student{
   private String name;
   private int age;
-    private String major;
+  private String major;
 
   public Student(String name, String major, int age){
     this.name = name;
@@ -13,13 +13,13 @@ class Student{
     return major;
   }
 
-   public int getAge(){
+  public int getAge(){
     return age;
   }
 
   @Override
-   public String toString(){
-    return "Student{name:'"+name"', age:'"+age"', major:'"+major"'}";
+  public String toString(){
+    return "Student{name:'" + name + "', age:'" + age + "', major:'" + major + "'}";
   }
 
   public static void main(String[] args){
