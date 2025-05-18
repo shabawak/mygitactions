@@ -1,7 +1,3 @@
-"""
-Module containing student entity classes.
-"""
-
 class Student:
     """Represents a student with name, age, and major."""
 
@@ -38,11 +34,7 @@ class Student:
     def main() -> None:
         """Demonstration method."""
         student_age = 23
-        student = Student(
-            "John Doe",
-            student_age,
-            "Software Engineering"
-        )
+        student = Student("John Doe", student_age, "Software Engineering")
         print(student)
 
 
